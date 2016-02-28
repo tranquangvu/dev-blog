@@ -1,0 +1,27 @@
+%article.article-content
+  %header.article-header
+    %h1.title
+      = @article.title
+    .created_at
+      = @article.created_at.strftime("%d %B %Y")
+  %section
+    .article-description
+      = @article.description
+    .article-body
+      = @markdown.render(@article.body).html_safe
+
+  #comments
+    %h4.title
+      = fa_icon "comments"
+      Comments (#{@article.comments.count})
+    - if @article.comments
+      = render @article.comments, article: @article
+    #comment-form
+      = render "comments/form", article: @article
+
+  - if @article.user == current_user
+    .action
+      = link_to edit_article_path(@article), class: "btn-circle" do
+        = fa_icon "pencil"
+      = link_to @article, method: :destroy, data: {confirm: "Are you sure?"}, class: "btn-circle" do
+        = fa_icon "trash"

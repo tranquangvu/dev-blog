@@ -1,0 +1,36 @@
+.nav-container
+  .navbar.top-navbar
+    .container
+      .navbar-header
+        %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          - if user_signed_in?
+            %li
+              = link_to current_user.email, "#"
+            %li
+              = link_to 'Create Article', new_article_path, class: "btn nav-btn"
+            %li
+              = link_to 'Edit Profile', edit_user_registration_path, class: "btn nav-btn"
+            %li
+              = link_to "Logout", destroy_user_session_path, method: :delete, class: "btn nav-btn"
+          - else
+            %li
+              = link_to "Sign Up", new_user_registration_path, class: "btn nav-btn"
+            %li
+              = link_to "Login", new_user_session_path, class: "btn nav-btn"
+
+%header.header{class: header_height}
+  .intro.vertical-center
+    %h1
+      = link_to "ben's blog", root_path, class: "title"
+    %h3.description
+      The next step in your Ruby on Rails education. Home of the Let's Build series. Building beautiful web applications in Rails, NodeJS. Email me at vutran.513@gmail.com to discuss your project.
+
+  - if header_height == "full-height"
+    = link_to "#content", class: "scroll-down" do
+      = fa_icon "angle-down"

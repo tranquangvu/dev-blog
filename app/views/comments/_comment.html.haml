@@ -1,0 +1,9 @@
+.comment
+  .username
+    = comment.user.user_name
+  .content
+    = comment.content
+  - if comment.user == current_user
+    .delete
+      = link_to article_comment_path(article, comment), method: :delete, data: { confirm: "Are you sure?" } do
+        = fa_icon "trash"

@@ -1,0 +1,15 @@
+- @articles.each do |article|
+  %article.article
+    %h2.article-title
+      = link_to article.title, article, class: ""
+    .article-description
+      = article.description
+      = link_to article, class: "read-more" do
+        = fa_icon "angle-double-right"
+    .article-footer
+      .author
+        = article.user.email
+      .created_at
+        = article.created_at.strftime("%d %B %Y")
+
+= paginate @articles

@@ -1,0 +1,241 @@
+/*
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "compass";
+@import "base";
+@import "font-awesome";
+@import "fonts";
+@import "articles";
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  color: $text_grey;
+  line-height: 1.75 !important;
+  overflow-x: hidden !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.top-navbar{
+  width: 100%;
+  margin: 30px 0;
+  position: absolute;
+  background: transparent;
+
+  li a{
+    color: $white;
+    padding: 7.5px 15px;
+    margin: 0 5px;
+    transition: all 0.5s ease;
+
+    &:hover, &:focus{
+      background: transparent;
+    }
+  }
+
+  .nav-btn{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+
+    &:hover{
+      color: $link_grey;
+      background: $white;
+    }
+  }
+}
+
+.full-height{
+  height: 100% !important;
+}
+
+.header{
+  display: table;
+  width: 100%;
+  height: 50%;
+  background: asset_url("header_bg.jpg") no-repeat center top;
+  background-size: cover;
+
+  .intro{
+    padding: 0 20%;
+
+    .title{
+      color: $white !important;
+      font-weight: bold;
+    }
+
+    .description{
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+
+  .scroll-down{
+    font-size: 40px;
+    color: $white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+    left: 0;
+    @include animation(bounce 4s 2s infinite);
+  }
+}
+
+.vertical-center{
+  float: none !important;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Used to bounce .scroll-down on home page */
+@-webkit-keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+.form-control{
+  color: $text_grey;
+  box-shadow: none !important;
+  border: 1px solid #bfc8cd;
+  padding: 20px 10px;
+  transition: all 0.3s ease;
+
+  &:focus{
+    border-color: #98a0a4;
+  }
+}
+
+.btn-main{
+  color: #9EABB3;
+  transition: all 0.3s ease;
+  padding: 7.5px 15px;
+  border: #bfc8cd 1px solid;
+  background: transparent;
+  margin: 10px 0;
+
+  &:hover{
+    color: #889093;
+    border-color: #98a0a4;
+  }
+}
+
+.float-right{
+  float: right !important;
+}
+
+.alert{
+  width: 230px;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+
+.pagination{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+
+  a{
+    color: #FFFFFF;
+    margin: 0 5px;
+  }
+
+  .page{
+    display: inline-block;
+    background: #616161;
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    color: #FFFFFF;
+  }
+
+  .current{
+    background: #212121;
+  }
+
+  .next, .last, .first, .prev{
+    a{
+      display: inline-block;
+      background: transparent;
+      transition: all 0.3s ease;
+      padding: 2.5px 15px;
+      border: #bfc8cd 1px solid;
+      border-radius: 4px;
+      color: #9EABB3;
+
+      &:hover{
+        color: #889093;
+        border-color: #98a0a4;
+      }
+    }
+  }
+}
+
+.footer{
+  margin-top: 40px;
+  text-align: right;
+
+  .social-link{
+    display: inline-block;
+    list-style: none;
+
+    li{
+      display: inline-block;
+      margin: 0 1.5px;
+
+      a{
+        display: block;
+        width: 28px;
+        height: 28px;
+        background: #616161;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .page-info{
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 20px 0 5px;
+    color: #BBC7CC;
+  }
+}

@@ -1,0 +1,88 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "compass";
+@import "fonts";
+
+body{
+  overflow-x: hidden;
+  background: asset_url('devise_bg.jpg');
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  color: #384047;
+}
+
+.devise-form{
+  position: absolute;
+  left: 32%;
+  width: 480px;
+  background: #f4f7f8;
+  padding: 10px 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.3);
+
+  h1{
+    text-align: center;
+    font-weight: 800;
+    margin: 0 auto 30px auto;
+  }
+
+  .form-control{
+    margin-bottom: 30px;
+    padding: 20px 12px;
+    box-shadow: none;
+    border-radius: 0;
+    background: #E8EEEF;
+    border-color: transparent;
+
+    &:focus{
+      border-color: #1ab394;
+    }
+  }
+
+  .btn-devise{
+    width: 100%;
+    display: block;
+    padding: 12.5px 0;
+    margin-bottom: 5px;
+    background: #5FCF80;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .cyan-bg{
+    background: #00bcd4 !important;
+    border-color: #00acc1 !important;
+  }
+
+  .red-bg{
+    background: #f44336 !important;
+    border-color: #e53935 !important;
+  }
+
+  .remember-me{
+    margin-bottom: 30px;
+  }
+}
+
+.alert{
+  width: 230px;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+
+#error_explanation{
+  color: #f44336;
+
+  h2{
+    font-size: 20px;
+  }
+
+  ul li{
+    padding: 2.5px 0;
+  }
+}
