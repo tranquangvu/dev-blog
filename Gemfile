@@ -53,3 +53,4 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem "font-awesome-rails"
 gem 'kaminari'
 gem 'compass-rails'
+gem 'rails_12factor', group: :production
