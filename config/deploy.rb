@@ -5,9 +5,12 @@ set :application, "devblog"
 set :repo_url, "git@github.com:tranquangvu/dev-blog.git"
 set :branch, :master
 set :deploy_to, '/home/deploy/devblog'
+set :pty, true
 set :linked_files, %w{config/database.yml .env}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
-set :rvm_ruby_version, 'ruby-2.3.1'
+set :keep_releases, 5
+set :rvm_type, :user
+set :rvm_ruby_version, '2.3.1'
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
