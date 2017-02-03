@@ -52,6 +52,7 @@ group :development do
   gem 'capistrano-rvm'
 end
 
+gem 'puma'
 gem 'dotenv-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'

@@ -243,6 +243,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   pg
+  puma
   rails (= 4.2.4)
   rails_12factor
   redcarpet (~> 3.3, >= 3.3.4)
