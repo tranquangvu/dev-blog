@@ -53,7 +53,6 @@ group :development do
   gem 'capistrano-rvm'
 end
 
-gem 'dotenv-rails', :groups => [:development, :test]
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'haml', '~> 4.0', '>= 4.0.7'

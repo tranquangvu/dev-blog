@@ -7,6 +7,7 @@ set :branch, :master
 set :deploy_to, '/home/deploy/devblog'
 set :linked_files, %w{config/database.yml .env}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :rvm_ruby, '2.3.1'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
